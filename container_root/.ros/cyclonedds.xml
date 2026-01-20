@@ -2,8 +2,11 @@
 <CycloneDDS xmlns="https://cdds.io/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Domain id="any">
     <General>
-      <NetworkInterfaceAddress>auto</NetworkInterfaceAddress>
+      <Interfaces>
+        <NetworkInterface name="lo" multicast="true"/> 
+      </Interfaces>
       <AllowMulticast>true</AllowMulticast>
+      <EnableMulticastLoopback>true</EnableMulticastLoopback>
     </General>
     <Discovery>
       <ParticipantIndex>auto</ParticipantIndex>

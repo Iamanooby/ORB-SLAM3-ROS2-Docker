@@ -2,6 +2,11 @@ version: "3"
 services:
   orb_slam3_22_humble:
     image: orb-slam3-humble:22.04
+    build: 
+      dockerfile: Dockerfile
+      context: .
+      args:
+        USE_CI: "false"
     volumes:
       #full dev
       - /dev:/dev:rw
@@ -25,4 +30,5 @@ services:
     tty: true
     environment:
       - DISPLAY
+      - NO_AT_BRIDGE=1
     entrypoint: /bin/bash

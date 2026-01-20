@@ -104,8 +104,11 @@ private:
                       const sensor_msgs::msg::Image::ConstSharedPtr &depth_msg)
     {
         if (!rgb_info_received_ || !depth_info_received_)
+        {
+            RCLCPP_INFO(this->get_logger(), "Waiting for camera info messages...");
             return;
-        // Convert ROS image messages to OpenCV images
+        }
+            // Convert ROS image messages to OpenCV images
         cv::Mat rgb_image, depth_image;
         try
         {

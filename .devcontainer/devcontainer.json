@@ -1,0 +1,17 @@
+{
+  "name": "Docker for Orb Slam",
+  "dockerComposeFile": [
+    "../docker-compose.yml"
+  ],
+  "service": "orb_slam3_22_humble",
+  "runServices": ["orb_slam3_22_humble"],  // Add this line
+  "shutdownAction": "stopCompose",
+  "mounts": [
+        {
+            "source": "colcon_ws",
+            "target": "/root/colcon_ws",
+            "type": "volume"
+        },
+          ],
+  "workspaceFolder": "/root/colcon_ws"
+}

@@ -279,7 +279,7 @@ namespace ORB_SLAM3_Wrapper
             Eigen::Vector3f landmark_position = point->GetWorldPos();
             auto position = interface_->getTypeConversionPtr()->vector3fORBToROS(landmark_position);
             position = interface_->getTypeConversionPtr()->transformPointWithReference<Eigen::Vector3f>(affinePosToMap, position);
-            // RCLCPP_INFO_STREAM(this->get_logger(), "x: " << position.x() << " y: " << position.y() << " z: " << position.z());
+            RCLCPP_INFO_STREAM(this->get_logger(), "x: " << position.x() << " y: " << position.y() << " z: " << position.z());
             landmark.position.x = position.x();
             landmark.position.y = position.y();
             landmark.position.z = position.z();

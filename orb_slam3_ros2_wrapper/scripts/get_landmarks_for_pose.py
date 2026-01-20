@@ -13,7 +13,7 @@ class PoseSubscriberNode(Node):
         # Subscribe to a PoseStamped topic (adjust the topic name as needed)
         self.pose_subscription = self.create_subscription(
             PoseStamped,
-            '/pose_topic',  # Replace with your actual pose topic
+            '/robot_pose_slam',  # Replace with your actual pose topic
             self.pose_callback,
             10  # QoS profile, adjust if necessary
         )

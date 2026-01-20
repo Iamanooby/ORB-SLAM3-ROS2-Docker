@@ -498,3 +498,76 @@ ls
 tmux
 ls
 ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py 
+cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py
+cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
+cd /root/colcon_ws/ && rm -rf build && colcon build --symlink-install --cmake-args -DORB_SLAM3_ROS2_WRAPPER_ENABLE_CUDA=ON && source install/setup.bash
+ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py
+./launch_slam.sh
+ros2 topic list
+ros2 topic echo /rgb_camera
+ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py
+cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py
+ls
+cd ..
+l
+sls
+ls
+cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py
+cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py
+./launch_slam.sh
+ros2 topic echo /map_points
+ros2 topic list
+ros2 topic info /map_points --verbose
+ls
+./launch_slam.sh
+ros2 topic list
+ros2 topic info /map_points --verbose
+ros2 topic echo /depth_camera/compressed
+ros2 topic echo /depth_camera
+code ~/.bashrc
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+./launch_slam.sh
+ls
+cd src/
+ls
+cd ..
+ls
+cd ..
+./launch_slam.sh
+ros2 topic list
+ros2 topic echo /camera/colored_pointcloud
+ros2 topic list
+cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+./launch_slam.sh
+cd ..
+./launch_slam.sh
+ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py
+cd /root/colcon_ws/ && rm -rf build && colcon build --symlink-install --cmake-args -DORB_SLAM3_ROS2_WRAPPER_ENABLE_CUDA=ON && source install/setup.bash
+cd ..
+cd colcon_ws/
+source install/setup.bash
+ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py
+ros2 topic list
+ros2 topic echo /robot_pose_slam
+ros2 topic echo /map_data
+ros2 topic echo visible_landmarks
+ros2 topic echo map_points
+ros2 topic list
+ros2 topic echo visible_landmarks_pose
+ros2 topic info visble_landmarks
+ros2 topic info visible_landmarks
+ros2 topic info /visible_landmarks
+ros2 topic info /visible_landmarks --verbose
+ros2 topic echo /camera/colored_pointcloud 
+rqt
