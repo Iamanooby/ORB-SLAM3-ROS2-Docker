@@ -582,3 +582,6 @@ cd ..
 ./launch_slam.sh
 python3 colcon_ws/src/orb_slam3_map_generator/scripts/stitch_pcl_client.py
 python3 colcon_ws/src/orb_slam3_ros2_wrapper/scripts/get_landmarks_for_pose.py 
+ros2 topic echo /map_points
+ros2 topic list
+ros2 topic echo /visible_landmarks

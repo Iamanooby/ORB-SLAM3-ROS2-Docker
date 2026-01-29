@@ -1,7 +1,7 @@
 [safe]
 	directory = /home/orb/ORB_SLAM3
 [credential]
-	helper = "!f() { /root/.vscode-server/bin/994fd12f8d3a5aa16f17d42c041e5809167e845a/node /tmp/vscode-remote-containers-13399f26-b5c7-4008-b342-fa53243473df.js git-credential-helper $*; }; f"
+	helper = "!f() { /root/.vscode-server/bin/c9d77990917f3102ada88be140d28b038d1dd7c7/node /tmp/vscode-remote-containers-67a20e71-3854-4948-8e61-3ca3e2a18597.js git-credential-helper $*; }; f"
 [credential "https://dev.azure.com"]
 	useHttpPath = true
 [user]
