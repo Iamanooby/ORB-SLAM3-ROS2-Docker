@@ -571,3 +571,14 @@ ros2 topic info /visible_landmarks
 ros2 topic info /visible_landmarks --verbose
 ros2 topic echo /camera/colored_pointcloud 
 rqt
+ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py
+ros2 launch orb_slam3_map_generator map_generator.launch.py
+python3 colcon_ws/src/orb_slam3_map_generator/scripts/stitch_pcl_client.py 
+rviz2 -d orb_slam3.rviz
+cd /home/orb/ORB_SLAM3/ && sudo chmod +x build.sh && ./build.sh
+cd /root/colcon_ws/ && colcon build --symlink-install && source install/setup.bash
+./launch_slam.sh
+cd ..
+./launch_slam.sh
+python3 colcon_ws/src/orb_slam3_map_generator/scripts/stitch_pcl_client.py
+python3 colcon_ws/src/orb_slam3_ros2_wrapper/scripts/get_landmarks_for_pose.py 
