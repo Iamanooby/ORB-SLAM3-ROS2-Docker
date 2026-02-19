@@ -585,3 +585,49 @@ python3 colcon_ws/src/orb_slam3_ros2_wrapper/scripts/get_landmarks_for_pose.py
 ros2 topic echo /map_points
 ros2 topic list
 ros2 topic echo /visible_landmarks
+ls
+./launch_slam.sh
+ls
+cd colcon_ws/src/
+pwd
+ls
+ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py
+ros2 launch orb_slam3_map_generator map_generator.launch.py
+python3 colcon_ws/src/orb_slam3_map_generator/scripts/stitch_pcl_client.py 
+rviz2 -d orb_slam3.rviz
+./launch_slam.sh
+ros2 launch orb_slam3_ros2_wrapper unirobot.launch.py
+ros2 launch orb_slam3_map_generator map_generator.launch.py
+python3 colcon_ws/src/orb_slam3_map_generator/scripts/stitch_pcl_client.py 
+rviz2 -d orb_slam3.rviz
+./launch_slam.sh
+cd colcon_ws/src/orb_slam3_map_generator/scripts/
+python3 match_csv.py 
+./launch_slam.sh
+ros2 topic list
+ros2 topic echo /map_data\
+ros2 topic echo /map_data
+ros2 run teleop_twist_keyboard teleop_twist_keyboard 
+rqt
+ros2 
+ros2 bag play src/rosbag_pcl
+ls
+ros2 bag play colcon_ws/src/rosbag_pcl
+./launch_slam.sh
+ls
+cd atlas.osa 
+stat atlas.osa 
+ls atlas.osa 
+ros2 bag play colcon_ws/src/rosbag_pcl/
+ros2 run teleop_twist_keyboard teleop_twist_keyboard 
+ros2 topic info /rgb_camera
+ros2 topic info /rgb_camera --verbose
+ros2 topic echo /rgb_camera 
+ros2 topic echo /depth_camera
+./launch_slam.sh
+ros2 topic echo /map_data
+ros2 topic echo /pose_array_topic
+ros2 topic echo /map_data
+ros2 topic echo /pose_array_topic\
+ros2 topic echo /pose_array_topic
+ros2 run teleop_twist_keyboard teleop_twist_keyboard 

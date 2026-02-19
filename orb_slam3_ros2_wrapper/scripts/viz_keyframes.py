@@ -7,7 +7,8 @@ class MapServiceClient(Node):
 
     def __init__(self):
         super().__init__('map_service_client')
-        self.client = self.create_client(GetMap, '/robot_0/orb_slam3_get_map_data')
+        # self.client = self.create_client(GetMap, '/robot_0/orb_slam3_get_map_data')
+        self.client = self.create_client(GetMap, 'orb_slam3/get_map_data')
         self.publisher_ = self.create_publisher(PoseArray, '/pose_array_topic', 10)
         while not self.client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('service not available, waiting again...')
@@ -29,7 +30,7 @@ class MapServiceClient(Node):
     def request_map_data(self):
         request = GetMap.Request()
         request.tracked_points = True
-        request.kf_id_for_landmarks = [67,68,69]
+        request.kf_id_for_landmarks = range(0,300)
         future = self.client.call_async(request)
         future.add_done_callback(self.callback)
 
